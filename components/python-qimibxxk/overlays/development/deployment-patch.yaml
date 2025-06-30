@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: python-qimibxxk
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/rhtap-task-runner:latest
-        name: container-image  
+        - image: tssc-quay-quay-tssc-quay.apps.cluster-fhj8w.fhj8w.sandbox2412.opentlc.com/tssc/python-qimibxxk:6f1814dbb197598f1eab374dfddb6449d88f365d@sha256:fd90f449df433c6b5c359050629d12b51c12c8ec9cac0db9f315abb04cda7440
+          name: container-image
